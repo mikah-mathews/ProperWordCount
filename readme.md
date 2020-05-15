@@ -26,7 +26,7 @@ Install .NET, type "dotnet run" in your terminal while within the project direct
 |Program will separate word into a letters array so program can check sentence words length and see if it matches| Cat| ["C", "a", "t"]|
 |Program will seperate sentence words into an array|[{Look} {at} {that} {cat}]|{{Look} {at} {that} {cat}}|
 |Program will go through sentence array and check each word| is["C", "a", "t"] == ["L", "o", "o", "k"]|["C", "a", "t"] != ["L", "o", "o", "k"]|
-|When word is matching, add one to wordOccurance |is ["C", "a", "t"] == ["C", "a", "t"] | ["C", "a", "t"] == ["C", "a", "t"] |
+|When word is matching, add one to wordOccurance | ["C", "a", "t"] == ["C", "a", "t"] | wordOccurance ++; |
 |Program will return word occurance|Look at that cat|word occurance = 1|
 
 
