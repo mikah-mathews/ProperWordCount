@@ -25,9 +25,9 @@ namespace WordCount.TestTools
     {
        //Arrange
       Word wordToCheck = new Word ("cat", "There is a Cat");
-      char[] target = {'There', 'is', 'a', 'Cat'};     
+      string[] target = {"There", "is", "a", "Cat"};     
       //Act
-      char[] result = sentenceToCheck.SentenceToWords();
+      string[] result = wordToCheck.SentenceToWords();
       //Assert
       CollectionAssert.AreEqual(result, target);
     }

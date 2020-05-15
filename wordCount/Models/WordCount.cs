@@ -20,12 +20,10 @@ namespace WordCount.Models
       return letterArray;
     }
 
-    public char[] SentenceToWords()
+    public string[] SentenceToWords()
     {
       string[] splitSentence = Sentence.Split(' ');
-      Console.WriteLine(splitSentence);
-      char[] deconstructedSentence = splitSentence.toCharArray();
-      return deconstructedSentence;
+      return splitSentence;
     }
   }
 }
