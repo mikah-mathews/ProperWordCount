@@ -43,5 +43,18 @@ namespace WordCount.TestTools
       //Assert
       Assert.AreEqual(result, target);
     }
+
+    [TestMethod]
+    public void Word_CheckWordInSentence_Int()
+    {
+      //Arrange
+      Word wordToCheck = new Word ("cat", "There is a cat");
+      int target = 1;    
+      string[] sentencePiece = wordToCheck.SentenceToWords();
+      //Act
+      int result = wordToCheck.WordSearchScore();
+      //Assert
+      Assert.AreEqual(result, target);
+    }
   }
 }

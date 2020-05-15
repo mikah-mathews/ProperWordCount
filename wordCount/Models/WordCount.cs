@@ -27,11 +27,22 @@ namespace WordCount.Models
       return splitSentence;
     }
 
-    public int WordMatchScore()
+    public int WordSearchScore(string wordToMatch, char[] sentenceCheck)
     {
-      int wordMatchScore = 0;
-      return wordMatchScore;
+      int points = 0;
+      for (int i = 0; i < sentenceCheck.Length; i++) 
+      {
+        bool hasValue = sentenceCheck.TryGetValue(wordToMatch, out string value);
+        if (hasValue) 
+        {
+          points++;
+        }
+        else
+        {
+          points = points;
+        }
+      }
+      return points;
     }
-
   }
 }
