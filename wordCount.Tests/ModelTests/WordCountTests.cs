@@ -15,7 +15,20 @@ namespace WordCount.TestTools
       Word wordToCheck = new Word ("cat");
       char[] target = {'c', 'a', 't'};     
       //Act
-      char[] result = myWord.WordToCharacters();
+      char[] result = wordToCheck.WordToCharacters();
+      //Assert
+      CollectionAssert.AreEqual(result, target);
+    }
+
+    [TestMethod]
+    public void Word_SentenceToWords_CharacterArray()
+    {
+       //Arrange
+      Word wordToCheck = new Word ("cat");
+      Sentence sentenceToCheck = new Sentence ("There is a Cat");
+      char[] target = {'There', 'is', 'a', 'Cat'};     
+      //Act
+      char[] result = sentenceToCheck.SentenceToWords();
       //Assert
       CollectionAssert.AreEqual(result, target);
     }
