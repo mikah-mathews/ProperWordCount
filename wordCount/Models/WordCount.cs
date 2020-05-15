@@ -23,6 +23,7 @@ namespace WordCount.Models
     public char[] SentenceToWords()
     {
       string[] splitSentence = Sentence.Split(' ');
+      Console.WriteLine(splitSentence);
       char[] deconstructedSentence = splitSentence.toCharArray();
       return deconstructedSentence;
     }
