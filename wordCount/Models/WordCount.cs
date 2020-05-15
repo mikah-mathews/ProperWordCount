@@ -8,13 +8,9 @@ namespace WordCount.Models
     public string Letters {get; set;}
     public string Sentence {get; set;}
 
-    public Word (string letters)
+    public Word (string letters, string sentence)
     {
       Letters = letters;
-    }
-
-    public Sentence (string sentence)
-    {
       Sentence = sentence;
     }
 
@@ -26,7 +22,8 @@ namespace WordCount.Models
 
     public char[] SentenceToWords()
     {
-      char[] deconstructedSentence = Sentence.Split(' ');
+      string[] splitSentence = Sentence.Split(' ');
+      char[] deconstructedSentence = splitSentence.toCharArray();
       return deconstructedSentence;
     }
   }
