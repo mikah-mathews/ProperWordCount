@@ -5,4 +5,10 @@ using System.Collections.Generic;
 namespace Program
 {
   class WordCount
+  {
+    static void Main()
+    {
+      
+    }
+  }
 }
