@@ -23,13 +23,25 @@ namespace WordCount.TestTools
     [TestMethod]
     public void Word_SentenceToWords_CharacterArray()
     {
-       //Arrange
+      //Arrange
       Word wordToCheck = new Word ("cat", "There is a Cat");
       string[] target = {"There", "is", "a", "Cat"};     
       //Act
       string[] result = wordToCheck.SentenceToWords();
       //Assert
       CollectionAssert.AreEqual(result, target);
+    }
+
+    [TestMethod]
+    public void Word_SetWordCountToZero_Int()
+    {
+      //Arrange
+      Word wordToCheck = new Word ("cat", "There is a Cat");
+      int target = 0;     
+      //Act
+      int result = wordToCheck.WordMatchScore();
+      //Assert
+      Assert.AreEqual(result, target);
     }
   }
 }

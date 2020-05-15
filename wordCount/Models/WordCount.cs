@@ -7,6 +7,7 @@ namespace WordCount.Models
   {
     public string Letters {get; set;}
     public string Sentence {get; set;}
+    
 
     public Word (string letters, string sentence)
     {
@@ -25,5 +26,12 @@ namespace WordCount.Models
       string[] splitSentence = Sentence.Split(' ');
       return splitSentence;
     }
+
+    public int WordMatchScore()
+    {
+      int wordMatchScore = 0;
+      return wordMatchScore;
+    }
+
   }
 }
