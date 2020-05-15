@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WordCount.Models
 {
@@ -21,6 +22,11 @@ namespace WordCount.Models
       return letterArray;
     }
 
+    public string ReturnWord()
+    {
+      return Letters;
+    }
+
     public string[] SentenceToWords()
     {
       string[] splitSentence = Sentence.Split(' ');
@@ -32,8 +38,9 @@ namespace WordCount.Models
       int points = 0;
       for (int i = 0; i < sentenceCheck.Length; i++) 
       {
-        bool hasValue = sentenceCheck.TryGetValue(wordToMatch, out string value);
-        if (hasValue) 
+        char[] currentWord = sentenceCheck[i].ToCharArray();
+        char[] wordToChar = wordToMatch.ToCharArray();
+        if (currentWord == wordToChar) 
         {
           points++;
         }

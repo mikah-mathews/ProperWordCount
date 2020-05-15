@@ -50,9 +50,10 @@ namespace WordCount.TestTools
       //Arrange
       Word wordToCheck = new Word ("cat", "There is a cat");
       int target = 1;    
-      string[] sentencePiece = wordToCheck.SentenceToWords();
+      string[] sentencePieces = wordToCheck.SentenceToWords();
+      string wordInput = wordToCheck.ReturnWord();
       //Act
-      int result = wordToCheck.WordSearchScore();
+      int result = wordToCheck.WordSearchScore(wordInput, sentencePieces);
       //Assert
       Assert.AreEqual(result, target);
     }
